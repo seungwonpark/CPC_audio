@@ -1,3 +1,6 @@
 __pycache__
 *.pyc
 .idea
+_seqs_cache.txt
+cpc/eval/ABX/dtw.c
+
