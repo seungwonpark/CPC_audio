@@ -22,7 +22,8 @@ def CPC_audio(pretrained=False,
     if pretrained:
         checkpoint_url = 'https://dl.fbaipublicfiles.com/librilight/CPC_checkpoints/60k_epoch4-d0f474de.pt'
         checkpoint = torch.hub.load_state_dict_from_url(checkpoint_url,
-                                                        progress=False)
+                                                        progress=False,
+                                                        map_location='cpu')
         loadArgs(locArgs, argparse.Namespace(**checkpoint["config"]))
     else:
         args = argparse.Namespace(**kwargs)
